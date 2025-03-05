@@ -1,146 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/medicalDrawer"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MedicalDrawerFragment">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/medicalhistory_drawer"
-        android:layout_width="213dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:text="Medical History "
-        android:textColor="@color/DarkBlueMainTitle"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.359"
-        app:layout_constraintStart_toEndOf="@+id/btnBack"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnBack"
-        android:layout_width="68dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/baseline_arrow_left_24"
-        android:contentDescription="Go back"
-        android:elevation="0dp"
-        app:backgroundTint="@color/DarkBlueMainTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/Allergies"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/medicalDrawer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:hint="Allergies"
-        android:drawablePadding="15dp"
-        android:drawableStart="@drawable/allergy"
-        android:ems="17"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medicalhistory_drawer" />
+        tools:context=".MedicalDrawerFragment">
 
-    <EditText
-        android:id="@+id/chronic_conditions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="17"
-        android:hint="Chronic Conditions "
-        android:drawablePadding="15dp"
-        android:inputType="text"
-        android:drawableStart="@drawable/chronic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Allergies" />
+        <TextView
+            android:id="@+id/medicalhistory_drawer"
+            android:layout_width="213dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Medical History "
+            android:textColor="@color/DarkBlueMainTitle"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.359"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/medication"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="17"
-        android:inputType="text"
-        android:drawablePadding="15dp"
-        android:hint="Medication"
-        android:drawableStart="@drawable/medcation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chronic_conditions" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:layout_width="68dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/baseline_arrow_left_24"
+            android:contentDescription="Go back"
+            android:elevation="0dp"
+            app:backgroundTint="@color/DarkBlueMainTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/surgeries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="17"
-        android:inputType="text"
-        android:drawablePadding="15dp"
-        android:hint="Surgeries"
-        android:drawableStart="@drawable/surgery"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medication" />
+        <EditText
+            android:id="@+id/Allergies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:hint="Allergies"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/allergy"
+            android:ems="17"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medicalhistory_drawer" />
 
-    <EditText
-        android:id="@+id/familyhistory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="17"
-        android:inputType="text"
-        android:hint="Family History"
-        android:drawablePadding="15dp"
-        android:drawableStart="@drawable/medical_file"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surgeries" />
+        <EditText
+            android:id="@+id/chronic_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="17"
+            android:hint="Chronic Conditions "
+            android:drawablePadding="15dp"
+            android:inputType="text"
+            android:drawableStart="@drawable/chronic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Allergies" />
 
-    <EditText
+        <EditText
+            android:id="@+id/medication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="17"
+            android:inputType="text"
+            android:drawablePadding="15dp"
+            android:hint="Medication"
+            android:drawableStart="@drawable/medcation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chronic_conditions" />
 
-        android:id="@+id/lastcheckup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="17"
-        android:inputType="date"
-        android:drawablePadding="15dp"
-        android:hint="Last CheckUp"
-        android:drawableStart="@drawable/lastcheckup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/familyhistory" />
+        <EditText
+            android:id="@+id/surgeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="17"
+            android:inputType="text"
+            android:drawablePadding="15dp"
+            android:hint="Surgeries"
+            android:drawableStart="@drawable/surgery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medication" />
 
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="280dp"
-        android:layout_height="65dp"
-        android:backgroundTint="@color/MedBlueBtnOutlineAndParagraph"
-        android:text="Edit"
-        android:textColor="@color/BgAndOnBtnWhite"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastcheckup"
-        app:layout_constraintVertical_bias="0.448">
+        <EditText
+            android:id="@+id/familyhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="17"
+            android:inputType="text"
+            android:hint="Family History"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/medical_file"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surgeries" />
 
-    </Button>
+        <EditText
+            android:id="@+id/lastcheckup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="17"
+            android:inputType="date"
+            android:drawablePadding="15dp"
+            android:hint="Last CheckUp"
+            android:drawableStart="@drawable/lastcheckup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/familyhistory" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="280dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/MedBlueBtnOutlineAndParagraph"
+            android:text="Edit"
+            android:textColor="@color/BgAndOnBtnWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lastcheckup"
+            app:layout_constraintStart_toStartOf="@+id/lastcheckup"
+            app:layout_constraintTop_toBottomOf="@+id/lastcheckup"
+            app:layout_constraintVertical_bias="0.448" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

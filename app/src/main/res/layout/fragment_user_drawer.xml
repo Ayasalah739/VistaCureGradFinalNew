@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/userDrawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UserDrawerFragment">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".UserDrawerFragment">
 
     <TextView
         android:id="@+id/userprofile_drawer"
@@ -96,6 +100,7 @@
             android:ems="17"
             android:hint="Weight"
             android:inputType="number" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -153,50 +158,49 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         app:layout_constraintVertical_bias="0.0" />
 
-
-    <RadioGroup
-        android:id="@+id/Radiogender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
-        app:layout_constraintStart_toEndOf="@+id/drGender"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-        <RadioButton
-            android:id="@+id/rbMale"
+        <RadioGroup
+            android:id="@+id/Radiogender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male"
-            android:textColor="@color/DarkBlueMainTitle"
-            android:textSize="18sp" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/drGender"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <RadioButton
-            android:id="@+id/rbFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="Female"
-            android:textColor="@color/DarkBlueMainTitle"
-            android:textSize="18sp" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/DarkBlueMainTitle"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="280dp"
-        android:layout_height="65dp"
-        android:backgroundTint="@color/MedBlueBtnOutlineAndParagraph"
-        android:text="Edit"
-        android:textColor="@color/BgAndOnBtnWhite"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Female"
+                android:textColor="@color/DarkBlueMainTitle"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="280dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/MedBlueBtnOutlineAndParagraph"
+            android:text="Edit"
+            android:textColor="@color/BgAndOnBtnWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Radiogender"
+            app:layout_constraintStart_toStartOf="@+id/drGender"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
